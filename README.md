@@ -1,13 +1,6 @@
 # ClimSeasonR
 An R Package for Agroclimatic Analysis of the Rainy Season
 
-## Installation
-
-```R
-install.packages("remotes") # Install remotes if not already installed 
-remotes::install_github("YODAdam/ClimSeasonR")
-
-````
 ## Introduction
 
 This R package provides tools to estimate key agroclimatic characteristics of the rainy season based on Sivakumar's principle. It allows users to calculate:
@@ -18,3 +11,13 @@ This R package provides tools to estimate key agroclimatic characteristics of th
 - 🌧️ Total rainfall during the season
 - 📈 Other essential agroclimatic parameters
 Designed for researchers, agronomists, and climatologists, this package helps analyze rainfall data to improve crop management and climate risk assessment.
+
+## Installation
+
+```R
+install.packages("remotes") # Install remotes if not already installed 
+remotes::install_github("YODAdam/ClimSeasonR")
+
+````
+## Quick Usage Example
+
