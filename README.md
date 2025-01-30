@@ -72,3 +72,16 @@ EOS <- ClimSeasonR::end_season(
 )
 
 ```
+
+### Dry spell between the start and the end of the season
+
+We can now compute the maximum dry spell between the start an the end of the season.
+
+The code below will compute the maximum dry spell between the end and the start of the season by taking as rainy day threshold 0.85 mm of rain.
+
+```r
+
+MDS <- Ouaga_rain_2020[SOS:EOS] %>%  # taking values between start and end
+  ClimSeasonR::dry_spell(threshold = 0.85, return_max = TRUE)
+
+```
