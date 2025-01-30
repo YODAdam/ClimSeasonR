@@ -102,7 +102,7 @@ dry_spell_2 <- function(x , threshold = 0.85, NAValues = 0.0, from = 1, to = len
   #
   # ss_sechesse <- ss_sechesse[ ss_chesse != 0]
 
-  if(is_empty(ss)) return(NA)
+  if(length(ss) == 0) return(NA)
 
   return (list( maximum = max(ss, na.rm = T),dry_spls= ss[ss !=0]))
 
