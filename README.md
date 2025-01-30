@@ -56,3 +56,19 @@ SOS <- ClimSeasonR::dt_start(
 )
 
 ```
+
+
+### End of the season
+
+The code below compute the end of the season starting from julian day 245 `from` supposing a soil with maximum capacity of 70 mm `soil_cap` and a daily mean evapotranspiration of 5 mm `daily_etp`.
+
+```r
+
+EOS <- ClimSeasonR::end_season(
+  x = Ouaga_rain_2020, 
+  from = 245, 
+  soil_cap = 70, 
+  daily_etp = 5.0
+)
+
+```
