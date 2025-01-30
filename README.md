@@ -32,7 +32,11 @@ library(readr)
 
 ## importing dataset
 
+## a dataset with Station, Year, Month, Day and Rain as columns
 data <-  read_csv(file = "data.csv")
+
+## Ouagadougou is juste une of the stations
+## we extract a rainfall vector for ouagadougou and 2020.
 
 Ouaga_rain_2020 <- data %>% 
   filter(Station_Name == 'Ouagadougou', Year == 2020) %>% 
@@ -113,5 +117,25 @@ Dspell_end <- Dspell_end(x = Ouaga_rain_2020, Fromlastrain = TRUE)
 ## all dry spells in the season
 
 all_Dspells <- dry_spell(x = Ouaga_rain_2020[dt_start(Ouaga_rain_2020):end_season(Ouaga_rain_2020)], return_max = FALSE)
+
+```
+### Combine all that with dplyr functions
+
+Now we will try to compute all parameters for everystation and every years at once using `group_by` and `summarize` from `dplyr`.
+
+```r
+
+params_tbl <- 
+  data %>% 
+  group_by(Station_Name, Year) %>% 
+  summarize(
+    
+    season_start = dt_start(Rain),
+    season_end = end_season(Rain),
+    dry_spell_start = Dspell_start(Rain),
+    dry_spell_end = Dspell_end(Rain)
+  )
+
+print(params_tbl)
 
 ```
