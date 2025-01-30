@@ -12,10 +12,11 @@ This R package provides tools to estimate key agroclimatic characteristics of th
 - 📈 Other essential agroclimatic parameters
 Designed for researchers, agronomists, and climatologists, this package helps analyze rainfall data to improve crop management and climate risk assessment.
 
-## Principe de la Méthode de Sivakumar
+## Sivakumar's Method Principle
 
-- **Date de début de saison** : Lorsque 20 mm de pluie sont enregistrés sur trois jours consécutifs après le 1ᵉʳ mai, sans qu'une période sèche de plus de sept jours ne survienne dans les 30 jours suivants.
-- **Date de fin de saison** : Dernier jour après le 1ᵉʳ septembre où une pluie d'au moins 5 mm est suivie d'une période sèche d'au moins 10 jours.
+- **Start date of the season**: When 20 mm of rain is recorded over three consecutive days after May 1st, without a dry spell of more than seven days occurring within the following 30 days.
+- **End date of the season**: The last day after September 1st when at least 5 mm of rain is followed by a dry period of at least 10 days.
+
 
 ## Installation
 
@@ -144,25 +145,20 @@ params_tbl <-
 print(params_tbl)
 
 ```
-
-## Références
+## References
 
 1. **Sivakumar, M. V. K. (1988).** "Predicting rainy season potential from the onset of rains in southern Sahelian and Sudanian climatic zones of West Africa." *Agricultural and Forest Meteorology, 42(4), 295-305.*
-2. **Ozer, P. (2001).** "Analyse pluviométrique au Niger." *Bulletin de la Société Géographique de Liège, 42, 49-59.* ([Lien](https://orbi.uliege.be/bitstream/2268/16133/1/OZER_NIAMEY1.pdf))
-3. **Sivakumar, M. V. K., & Awesso, Y. (1996).** "Agroclimatology of West Africa: Togo." *Information Bulletin No. 49, ICRISAT.* ([Lien](https://climatology.edpsciences.org/articles/climat/full_html/2010/01/climat20107p89/climat20107p89.html))
-4. **Marteau, R., et al. (2011).** "Démarrage de la saison des pluies et date de semis du mil dans le sud-ouest du Niger." *Sécheresse, 22(2), 87-97.* ([Lien](https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers16-04/010051275.pdf))
-5. **Balme, M., Galle, S., & Lebel, T. (2005).** "Démarrage de la saison des pluies au Sahel." *Sécheresse, 16(1), 15-22.* ([Lien](https://iri.columbia.edu/~ousmane/print/Onset/BalmeGalleLebel05_Secheresse.pdf))
+2. **Ozer, P. (2001).** "Rainfall analysis in Niger." *Bulletin of the Geographic Society of Liège, 42, 49-59.* ([Link](https://orbi.uliege.be/bitstream/2268/16133/1/OZER_NIAMEY1.pdf))
+3. **Sivakumar, M. V. K., & Awesso, Y. (1996).** "Agroclimatology of West Africa: Togo." *Information Bulletin No. 49, ICRISAT.* ([Link](https://climatology.edpsciences.org/articles/climat/full_html/2010/01/climat20107p89/climat20107p89.html))
+4. **Marteau, R., et al. (2011).** "Start of the rainy season and millet sowing date in southwest Niger." *Sécheresse, 22(2), 87-97.* ([Link](https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers16-04/010051275.pdf))
+5. **Balme, M., Galle, S., & Lebel, T. (2005).** "Onset of the rainy season in the Sahel." *Sécheresse, 16(1), 15-22.* ([Link](https://iri.columbia.edu/~ousmane/print/Onset/BalmeGalleLebel05_Secheresse.pdf))
 
-## Utilisation
+## Usage
 
-1. Cloner ce dépôt :
+1. Clone this repository:
    ```bash
-   git clone https://github.com/votre-repo.git
-   ```
-2. Exécuter le script d'analyse (exemple en R) :
-   ```r
-   source("calculate_season.R")
+   git clone https://github.com/YODAdam/ClimSeasonR.git
    ```
 
 ## Contributions
-Les contributions sont les bienvenues ! Veuillez soumettre une pull request pour toute amélioration ou correction.
+Contributions are welcome! Please submit a pull request for any improvements or corrections.
