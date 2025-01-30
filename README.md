@@ -85,3 +85,16 @@ MDS <- Ouaga_rain_2020[SOS:EOS] %>%  # taking values between start and end
   ClimSeasonR::dry_spell(threshold = 0.85, return_max = TRUE)
 
 ```
+
+### Dry spell at the beging of the season
+
+The code below will compute the dry spells at the begining of the season from the start to 50 days `period` commonly known as the bloom date.
+
+```{r}
+
+Dspell_Beging <- Dspell_start(x = Ouaga_rain_2020, 
+                              period = 50, 
+                              Tolastrain = TRUE)
+
+```
+
