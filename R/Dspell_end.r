@@ -17,11 +17,11 @@
 Dspell_end <- function(x, from = dt_start(x) ,  to = end_season(x), Fromstart = 50, threshold = 0.85, Fromlastrain = TRUE) {
 
 
-  if (is.na(from)) return(NA)
+  if (is.na(from)) {return(NA)}
 
   start <- from + Fromstart
 
-  if (Fromlastrain) {start <- from + begin_to_end(x, from = from, period = Fromstart, threshold = threshold) }
+  if (Fromlastrain) {start <- begin_to_end(x, from = from, period = Fromstart, threshold = threshold) }
 
   return( dry_spell(x[ start:to], threshold = threshold, return_max = TRUE))
 
