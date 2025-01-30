@@ -21,3 +21,38 @@ remotes::install_github("YODAdam/ClimSeasonR")
 ````
 ## Quick Usage Example
 
+### Loading libraries and importing dataset
+
+The code below start by importing a set of data, extracting on year rainfall data for a station an a specifique year.
+
+```{r}
+library(ClimSeasonR)
+library(dplyr)  ## install if you dn't have it
+library(readr)
+
+## importing dataset
+
+data <-  read_csv(file = "data.csv")
+
+Ouaga_rain_2020 <- data %>% 
+  filter(Station_Name == 'Ouagadougou', Year == 2020) %>% 
+  pull(var = Rain)
+
+```
+### Start of the season
+
+The code below try to find the first time we have 20 mm of rain `SumVdays` over 3 days `n_Vdays` without more that 20 concecutive dry days `maxDrySpell_aft` in the following  30 days `onMaxdays`.
+```{r}
+
+SOS <- ClimSeasonR::dt_start(
+  x = Ouaga_rain_2020, 
+  early = 91, 
+  limit = 200, 
+  SumVdays = 20.0, 
+  n_Vdays = 3, 
+  maxDrySpell_aft = 20, 
+  onMaxdays = 30
+  
+)
+
+```
