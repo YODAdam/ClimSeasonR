@@ -80,7 +80,7 @@ dry_spell <- function(x, threshold = 0.85, replaceNA = TRUE, NAvalues = 0.0, Max
     #
     # ss_sechesse <- ss_sechesse[ ss_chesse != 0]
 
-    if(is_empty(ss)) return(NA)
+    if(lenght(ss) == 0) return(NA)
 
     if (return_max)  return( max(ss, na.rm = T) )  else  return (list( maximum = max(ss, na.rm = T),all_spells = ss[ss !=0]))
 
