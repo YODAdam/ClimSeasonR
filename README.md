@@ -119,7 +119,7 @@ Dspell_end <- Dspell_end(x = Ouaga_rain_2020, Fromlastrain = TRUE)
 all_Dspells <- dry_spell(x = Ouaga_rain_2020[dt_start(Ouaga_rain_2020):end_season(Ouaga_rain_2020)], return_max = FALSE)
 
 ```
-### Combine all that with dplyr functions
+### Combine all that with `dplyr` functions
 
 Now we will try to compute all parameters for everystation and every years at once using `group_by` and `summarize` from `dplyr`.
 
