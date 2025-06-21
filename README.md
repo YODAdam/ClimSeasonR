@@ -131,6 +131,9 @@ Now we will try to compute all parameters for everystation and every years at on
 
 ```r
 
+library(ClimSeasonR)
+library(dplyr)
+
 params_tbl <- 
   data %>% 
   group_by(Station_Name, Year) %>% 
