@@ -22,7 +22,7 @@ authors:
   equal-contrib: true
   affiliation: 2
 - name: Ousmane Aly Yabyouré Ouedraogo
-  affiliation: 3
+  affiliation: 1
 bibliography: paper.bib
 affiliations:
 - name: Agence Nationale de la Météorologie, Burkina Faso
@@ -81,3 +81,4 @@ The resulting columns correspond to different climatic indicators:
 We acknowledge support of the National Meteorological Agency of Burkina Faso.
 
 # References
+
